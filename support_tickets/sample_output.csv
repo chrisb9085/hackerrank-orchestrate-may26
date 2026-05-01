@@ -1,0 +1,190 @@
+Issue,Subject,Company,Response,Product Area,Status,Request Type,status,product_area,response,justification,request_type
+I notice that people I assigned the test in October of 2025 have not received new tests. How long do the tests stay active in the system.,Test Active in the system,HackerRank,"Hi,
+
+
+Tests in HackerRank remain active indefinitely unless a start and end time are set. 
+Without these, tests do not expire automatically.
+
+
+
+To set expiration times, specify a start and end date/time in the test settings. After expiration:
+
+Invited candidates cannot access the test.
+The ""Invite"" button is disabled; no new invitations can be sent.
+
+
+To check or change expiration settings:
+
+Go to the test's Settings and select the General section.
+Update the Start date & time and End date & time fields as needed.
+To keep the test active indefinitely, clear these fields by clicking the clear icon (X).
+
+
+If the test has an expiration set, adjust these settings to enable new invitations.",screen,Replied,product_issue,replied,Test Management,"Thank you for reaching out! The reason candidates assigned in October 2025 may not be receiving or accessing the test could be related to the test's expiration settings. In HackerRank, you can define a start and end time to control when a test remains active. Once a test expires:
+
+- Invited candidates can no longer access the test.
+- The **Invite** button is disabled.
+- You cannot invite new candidates.
+
+To check and update the expiration time for your test, please follow these steps:
+1. Log in to your **HackerRank for Work** account.
+2. Go to the **Tests** tab.
+3. Open the relevant test.
+4. Go to **Settings > General** and review or modify the start/end date and time zone.
+
+If the test has expired, extending the end date should restore access for invited candidates. Please note that the corpus does not specify a default system-wide duration for how long tests stay active — this is controlled by the expiration settings you configure on each individual test.
+
+If after checking the settings the issue persists, please don't hesitate to reach out for further assistance!","The corpus excerpt from 'Modify Test Expiration Time' (source 1) directly explains that tests have configurable start/end times, and that after expiration candidates cannot access the test and invites are disabled — which aligns with the user's reported issue. No specific default system duration is mentioned in the corpus, so that limitation was noted in the response.",product_issue
+site is down & none of the pages are accessible,,,Escalate to a human,,Escalated,bug,replied,Site Accessibility / Outage,"Thank you for reaching out! We're sorry to hear you're having trouble accessing the site. Unfortunately, your ticket does not specify which company or product you're referring to (HackerRank, Claude/Anthropic, or Visa), and no company information was provided. Could you please clarify which site or service you're experiencing issues with? In the meantime, here are a few general troubleshooting steps that may help: (1) Try refreshing the page or clearing your browser cache and cookies. (2) Check if a VPN or firewall might be blocking access. (3) Try a different browser or network connection. Once we know which product you're referring to, we can provide more targeted guidance.","The ticket lacks company/product context, making it impossible to route accurately. The corpus contains general troubleshooting guidance (e.g., clearing cache/cookies from HackerRank article [3], firewall/VPN checks from Claude article [5]) that can serve as partial guidance. This is not a fraud or security incident requiring escalation, so a 'replied' status with general troubleshooting steps and a request for clarification is appropriate.",bug
+"I'm noticing that you all have many default versions of roles. (e.g. front end developer for react, angular, vue.js, etc.) What do you consider best practice 
+for when to create a new test versus create a variant of the test? What are the advantages and disadvantages of using variants?","When should I create a variant versus
+ have a different test?",HackerRank,"Hi,
+
+
+Consider these guidelines when choosing between creating a new test or a variant:
+
+
+
+When to Use Test Variants:
+
+Create variants to adapt a single test to different candidate profiles, 
+such as roles with different tech stacks (React, Angular, Vue.js).
+Variants streamline assessments by showing candidates only relevant sections and generating role-specific reports.
+
+
+Advantages of Test Variants:
+
+Reduces the need to manage multiple tests, improving efficiency.
+Decreases maintenance while allowing scalable personalization.
+Ensures candidates are tested on relevant content.
+
+
+Disadvantages and Limitations of Test Variants:
+
+A test must have at least two variants to function; you cannot delete a variant if only two exist.
+Variants without logic are hidden from candidates until logic is added.",screen,Replied,product_issue,replied,Test Management,"Great question! Based on HackerRank's support documentation, here's guidance on variants vs. separate tests:
+
+**When to use Test Variants:**
+Test variants are ideal when you want a **single assessment that adapts to different candidate profiles** — for example, assessing front-end developers across React, Angular, and Vue.js. The key advantages include:
+- Eliminates the need to manage separate tests
+- Improves administrative efficiency
+- Ensures candidates are assessed on the most relevant content for their specific profile
+- All variants live under one assessment, making it easier to organize and track
+
+**When to create a separate test:**
+A separate test makes more sense when the roles, skills, or evaluation criteria are **fundamentally different** enough that they don't belong under the same assessment umbrella — for instance, a Front-End Developer test vs. a DevOps/Cloud Engineer test would likely warrant entirely separate assessments.
+
+**In summary:** If the roles share a common foundation but differ in a specific technology or specialization (like React vs. Angular), variants are the recommended approach. If the roles are broadly different in scope and skill set, separate tests are more appropriate.
+
+Note that the corpus does not provide an exhaustive pros/cons list beyond the above, so for deeper guidance specific to your hiring workflow, you may want to consult your HackerRank account representative.","The response is grounded primarily in Corpus [1] ('Create Test Variants'), which defines the purpose and advantages of test variants, and is supplemented by Corpus [2] ('Best Practices for Screening') for general test creation guidance. The question is a how-to/best-practice question about an existing feature, making it a product_issue that can be answered with a 'replied' status.",product_issue
+"Hi there
+
+We have sent a candidate a Hackerrank assessment already, but we have been informed that they require extra time. As the assessment is 105 minutes, they need an extra 50% extra time added (so around 53 minutes) in addition.
+
+Please can you provide step-by-step instruction on how we are to reinvite them.
+
+Do we find their profile in 'Candidates' , put in Add time 53 minutes and then click 'reinvite' and send the email? The email to the candidate says 105 minutes as the duration though still so not sure how we can check?
+
+Thanks","How to reinvite candidate to Hackerrank 
+assessment and add extra time",HackerRank,"Log in to your HackerRank for Work account using your credentials.
+Go to the Tests tab. 
+Select the test you want to modify.
+Go to the Candidates tab.
+Select the checkbox next to the candidate(s) you want to accommodate time.
+Click More > Add Time Accommodation. 
+Enter the accommodation percentage in multiples of five.
+Click Save. A success message appears.
+
+Time accommodation can also be added before the invite has been sent. Please refer to this support article for the detailed steps : https://support.hackerrank.com/articles/4811403281-adding-extra-time-for-candidates",screen,Replied,product_issue,replied,Test Management,"Hi there,
+
+Thank you for reaching out! Based on our support documentation, here is the recommended approach for adding extra time and reinviting a candidate:
+
+**Step 1: Add Time Accommodation (before reinviting)**
+HackerRank offers an 'Add Time Accommodation' feature that allows you to extend test duration for a candidate, as long as they have not yet started the test. You should apply this before sending the reinvite. Our documentation confirms this can be done either before or after sending the initial invite, provided the candidate hasn't started the test yet.
+
+**Step 2: Reinvite the Candidate**
+To reinvite the candidate:
+1. Log in to your **HackerRank for Work** account.
+2. Go to the **Tests** tab.
+3. Open the relevant test.
+4. Go to the **Candidates** tab.
+5. Select the checkbox next to the candidate's name and proceed with the reinvite.
+
+**Important notes:**
+- You will need a **Recruiter licence** to reinvite candidates.
+- When you reinvite a candidate, their **previous report is automatically deleted**. If you need to recover a deleted report, please contact support@hackerrank.com.
+- Regarding your question about the email still showing 105 minutes — our documentation doesn't specifically confirm how the updated duration is reflected in the reinvite email. We'd recommend confirming this detail by contacting support@hackerrank.com directly.
+
+For full step-by-step details on adding time accommodation, please refer to: https://support.hackerrank.com/articles/4811403281-adding-extra-time-for-candidates
+
+Hope this helps!","The response is grounded in corpus articles [1] (Add Time Accommodation feature) and [3] (Reinviting Candidates to a Test), which together cover both parts of the user's question. The question about how the duration appears in the reinvite email could not be fully answered from the corpus, so the user was directed to contact support for clarification on that specific point.",product_issue
+"i signed up using google login on hackerrank community , so i do not have a separate hackerrank password. please delete my account
+",,HackerRank,"To delete your HackerRank account created via Google login, first set a password for your account, as Google login accounts do not have one by default.
+
+Follow these steps to set a password and delete your account:
+
+Go to the HackerRank login page and click ""Forgot your password?""
+Enter the email linked to your Google login and follow the instructions to reset and set a new password.
+Log in to your HackerRank account using the new password.
+Click your profile icon in the top-right corner and select Settings.
+Scroll to the Delete Accounts section.
+Click Delete Account and follow the prompts, entering your new password to confirm.
+
+Deleting your account will permanently remove all data and cannot be undone.",community,Replied,product_issue,replied,Account Settings - Manage Account,"Thank you for reaching out! Since you signed up using Google login, there is one extra step required before you can delete your HackerRank Community account: you must first set a HackerRank password.
+
+Here's how to proceed:
+
+1. **Set a password first**: Because you signed up via Google, you'll need to follow the [Resetting Password](https://help.hackerrank.com/articles/2403570133-update-or-reset-password#resetting-password-5) steps to create a HackerRank-specific password.
+
+2. **Then delete your account**:
+   - Log in to [HackerRank Community](https://www.hackerrank.com/) using your credentials.
+   - Click the profile icon in the top-right corner.
+   - Select **Settings** from the drop-down menu.
+   - Scroll to the **Delete Accounts** section and follow the prompts.
+
+**Please note**: Deleting your account is permanent and will remove all your data, including your profile, earned badges, and leaderboard positions.
+
+If you have any trouble setting your password or completing the deletion, feel free to reach out to HackerRank support at help@hackerrank.com.","The corpus explicitly states in the 'Delete an Account' article that users who signed up via a third-party provider (such as Google) must set a password before deleting their account, and directs them to the 'Resetting Password' documentation. The full deletion steps are also provided in that same article.",product_issue
+"One of my claude conversations has some private info, i forgot to make a temporary chat, is there anything
+ else that can be done? like delete etc?",,Claude,"To delete an individual conversation:
+
+1. Navigate to the conversation you want to delete.
+
+2. Click on the name of the conversation at the top of the screen.
+
+3. Select either ""Delete"" from the options that appear:
+
+
+
+https://privacy.claude.com/en/articles/11117329-how-can-i-delete-or-rename-a-conversation",privacy,Replied,product_issue,replied,Conversation Management / Privacy,"Hi there! We understand your concern about private information in one of your conversations. While the corpus doesn't specifically mention a direct 'delete conversation' feature, here's what we can share based on available support information:
+
+1. **Your chats are private by default** — Regular conversations are not shared with anyone unless you explicitly use the 'Share' button to create a shareable link. So your conversation is not publicly visible.
+
+2. **Training data protections** — Even if your data is used to help improve Claude, Anthropic de-links it from your user ID before any review, and tools are used to filter or obfuscate sensitive data.
+
+3. **For future conversations** — You can use **Incognito Chats** (available on all plans: Free, Pro, Max, Team, and Enterprise) to have temporary conversations that aren't saved to your chat history and are not used for training.
+
+4. **Data export** — You can export your data via Settings > Privacy, but this does not appear to include a deletion option based on the available information.
+
+For options specifically around deleting a conversation or requesting removal of your data, we recommend visiting Claude's **Privacy Center** at privacy.claude.com or checking your **Settings > Privacy** section for any available data controls. If you need further assistance with data deletion, please reach out to Anthropic's support team directly as this may require account-level action.","The corpus covers conversation privacy defaults (excerpt [1]), incognito chats (excerpt [2]), data protections for sensitive info (excerpt [5]), and data export options (excerpt [4]), which collectively allow a partial but helpful response. No corpus excerpt explicitly covers conversation deletion, so the user is directed to Privacy Settings and Anthropic support for that specific action. Escalation is not warranted as there is no fraud or security incident — this is a privacy/data management inquiry.",product_issue
+What is the name of the actor in Iron Man?,"Urgent, please help",None ,"I am sorry, this is out of scope from my capabilities",conversation_management,Replied,invalid,replied,Out of Scope,"Thank you for reaching out! Unfortunately, your question about the actor in Iron Man falls outside the scope of our support services. We provide support for HackerRank, Claude (Anthropic), and Visa products only. For general knowledge questions like this, we'd suggest using a search engine or a general-purpose assistant. Is there anything related to our supported products we can help you with?","The question is entirely unrelated to HackerRank, Claude, or Visa products and services. No corpus content is relevant to this inquiry. Per the status rules, out-of-scope questions should receive a polite 'replied' response.",invalid
+I bought Visa Traveller's Cheques from Citicorp and they were stolen in Lisbon last night. What do I do?,,Visa,"Call the issuer (Citicorp) immediately. 
+Freephone 1-800-645-6556 or collect 1-813-623-1709, Mon–Fri 6:30 am–2:30 pm EST. 
+
+Automated cheque verification is available 24/7 in English/Spanish; outside Citicorp's hours your call is recorded and returned the next business day.
+
+Have this info ready before you call, it's what the issuer will ask: cheque serial numbers, where and when you bought the cheques, how/when they were lost or stolen, and the issuer name (Citicorp). 
+
+Refunds can typically be arranged within 24 hours, subject to T&Cs.
+Notify the local police in Lisbon (Visa's safety guidance for lost/stolen cheques).
+If you can't reach Citicorp, use Visa's traveller's-cheque contact form on visa.co.in.",travel_support,Replied,product_issue,replied,Traveller's Cheques - Lost/Stolen,"We're sorry to hear about your stolen Traveller's Cheques — that must be a very stressful situation. Here's what you should do immediately:
+
+Because your cheques were issued by Citicorp, you should contact Citicorp (your issuing bank) directly as soon as possible to report the theft and request a replacement or refund. Lost or stolen cheques can be replaced or refunded subject to certain terms and conditions.
+
+If you are unable to locate Citicorp's contact details, you can also reach Visa directly for Traveller's Cheque support here: https://www.visa.co.in/supporting-info/travelers-cheques-contact-us.html
+
+We hope this gets resolved quickly for you. Stay safe!","The corpus excerpt from the Visa Traveller's Cheques support page (travelers-cheques.md) directly addresses lost or stolen cheques, advising users to immediately call the issuing bank and providing a Visa contact link if the issuing bank's details cannot be found. Since the cheques were issued by Citicorp, the user should contact Citicorp first. This is a standard support scenario that can be fully addressed with the available corpus content.",product_issue
+Where can I report a lost or stolen Visa card from India?,Card stolen,Visa,"Call Visa India at 000-800-100-1219 to report a lost card. 
+
+From anywhere else in the world, Visa's Global Customer Assistance Service is reachable 24/7 at +1 303 967 1090 and can block your card within ~30 minutes of being reported, plus arrange emergency cash and a replacement card",general_support,Replied,product_issue,replied,Lost or Stolen Card,"We're sorry to hear your card has been stolen. To report a lost or stolen Visa card from India, please contact Visa's consumer support. Unfortunately, the support corpus excerpt provided does not include a specific phone number listed for India in the visible portion of the table. We recommend visiting Visa's Consumer Support page directly at https://www.visa.co.in/support.html to find the India-specific contact number, or contacting your card-issuing bank directly, as they are typically the first point of contact for lost or stolen card reports. Please act quickly to protect your account.","The corpus (Excerpt 1) contains a table of country-specific phone numbers for lost or stolen cards, but the visible portion does not include India. The user was directed to the official Visa India support page (https://www.visa.co.in/support.html) where the full list, including India's number, would be available. This is a product_issue as it relates to an existing support feature (lost/stolen card reporting).",product_issue
+Thank you for helping me,,,Happy to help,,Replied,invalid,replied,General,"You're welcome! We're happy to help. If you ever have any questions or need assistance in the future, don't hesitate to reach out. Have a great day!","The message is a simple pleasantry ('Thank you for helping me') with no subject, company, or actionable issue. No corpus content is needed; a brief, polite closing reply is appropriate.",invalid
