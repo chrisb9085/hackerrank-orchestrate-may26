@@ -12,6 +12,7 @@ from dataclasses import dataclass
 
 import anthropic
 
+from escalation import score_ticket
 from retriever import Retriever
 
 _client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -67,6 +68,16 @@ def process_ticket(
     company: str,
     retriever: Retriever,
 ) -> TicketResult:
+    esc = score_ticket(issue=issue, subject=subject)
+    if esc.escalate:
+        return TicketResult(
+            status="escalated",
+            product_area="Escalated",
+            response="Escalated to a human.",
+            justification=f"Pre-LLM escalation score {esc.score} >= threshold. Signals: {', '.join(esc.reasons)}.",
+            request_type="product_issue",
+        )
+
     docs = retriever.search(query=f"{subject} {issue}", company=company or None, top_k=_TOP_K)
     corpus_block = _format_corpus(docs)
 
