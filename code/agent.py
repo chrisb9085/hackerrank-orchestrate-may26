@@ -47,7 +47,7 @@ Use "replied" for everything else: out-of-scope questions, pleasantries, partial
 --- REQUEST TYPE ---
 - product_issue: can't do something the product supports; how-to questions; access/config problems
 - feature_request: explicitly asking for a new capability that doesn't exist yet
-- bug: broken behaviour, unexpected errors, or security/vulnerability reports
+- bug: broken behaviour, unexpected errors, security/vulnerability reports, or outages
 - invalid: irrelevant, nonsensical, malicious, or pleasantry; out of scope for all three companies
 Note: asking HOW to use an existing feature = product_issue, not feature_request.
 """

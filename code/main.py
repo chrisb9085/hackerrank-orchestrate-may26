@@ -21,8 +21,8 @@ from agent import TicketResult, process_ticket
 from retriever import Retriever
 
 _REPO_ROOT = Path(__file__).parent.parent
-_DEFAULT_TICKETS = _REPO_ROOT / "support_tickets" / "sample_support_tickets.csv"
-_DEFAULT_OUTPUT = _REPO_ROOT / "support_tickets" / "sample_output.csv"
+_DEFAULT_TICKETS = _REPO_ROOT / "support_tickets" / "support_tickets.csv"
+_DEFAULT_OUTPUT = _REPO_ROOT / "support_tickets" / "output.csv"
 
 OUTPUT_COLUMNS = ["status", "product_area", "response", "justification", "request_type"]
 
