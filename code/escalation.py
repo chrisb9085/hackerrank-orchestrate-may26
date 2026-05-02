@@ -13,7 +13,7 @@ ESCALATION_THRESHOLD = 3
 # Each entry: (compiled pattern, score, reason label)
 _RULES: list[tuple[re.Pattern, int, str]] = [
     # Fraud / financial crime
-    (re.compile(r"\b(fraud|fraudulent|scam|stolen card|unauthorized (charge|transaction|payment))\b", re.I), 3, "fraud"),
+    (re.compile(r"\b(fraud|fraudulent|scam|stolen card|unauthorized)\b", re.I), 3, "fraud"),
     # Identity / account takeover
     (re.compile(r"\b(identity theft|account (hacked|compromised|taken over)|someone else.{0,20}account)\b", re.I), 3, "identity_theft"),
     # Legal / regulatory
@@ -26,7 +26,7 @@ _RULES: list[tuple[re.Pattern, int, str]] = [
     (re.compile(r"\b(ignore (previous|all|prior) instructions?|disregard (your )?(rules?|instructions?)|show (me )?(your )?(prompt|system|internal))\b", re.I), 3, "prompt_injection"),
     # Urgency + financial together (weaker signal alone, stronger combined)
     (re.compile(r"\b(urgent|emergency|immediately|asap|right now)\b", re.I), 1, "urgency"),
-    (re.compile(r"\b(refund|chargeback|money|payment|billing|invoice)\b", re.I), 1, "financial"),
+    (re.compile(r"\b(refund|chargeback|money|payment|billing|invoice|charge|transaction)\b", re.I), 1, "financial"),
     # Sensitive account actions
     (re.compile(r"\b(delete (my )?(account|data)|permanently (remove|delete)|right to (erasure|be forgotten))\b", re.I), 1, "account_deletion"),
 ]
