@@ -29,7 +29,7 @@ class Retriever:
         texts = [d.text for d in self._docs]
         self._embeddings = self._model.encode(texts, convert_to_numpy=True, show_progress_bar=True)
 
-    def search(self, query: str, company: str | None = None, top_k: int = 5) -> list[tuple[Document, float]]:
+    def search(self, query: str, company: str | None = None, top_k: int = 3) -> list[tuple[Document, float]]:
         """Return top-k (document, score) pairs most relevant to query.
 
         If company is provided and has matching docs, search is restricted to

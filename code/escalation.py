@@ -12,8 +12,8 @@ ESCALATION_THRESHOLD = 3
 
 # Each entry: (compiled pattern, score, reason label)
 _RULES: list[tuple[re.Pattern, int, str]] = [
-    # Fraud / financial crime
-    (re.compile(r"\b(fraud|fraudulent|scam|stolen card|unauthorized)\b", re.I), 3, "fraud"),
+    # Fraud / financial crime — active unauthorized use, not just reporting a lost item
+    (re.compile(r"\b(fraud|fraudulent|scam|unauthorized (charge|transaction|payment|access)|someone (charged|used) my)\b", re.I), 3, "fraud"),
     # Identity / account takeover
     (re.compile(r"\b(identity theft|account (hacked|compromised|taken over)|someone else.{0,20}account)\b", re.I), 3, "identity_theft"),
     # Legal / regulatory
