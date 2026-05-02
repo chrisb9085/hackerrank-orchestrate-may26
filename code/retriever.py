@@ -30,19 +30,29 @@ class Retriever:
         self._embeddings = self._model.encode(texts, convert_to_numpy=True, show_progress_bar=True)
 
     def search(self, query: str, company: str | None = None, top_k: int = 5) -> list[tuple[Document, float]]:
-        """Return top-k (document, score) pairs most relevant to query."""
-        q_emb = self._model.encode([query], convert_to_numpy=True)[0]
-        scores = _cosine_similarity(q_emb, self._embeddings)
+        """Return top-k (document, score) pairs most relevant to query.
 
-        # Optionally bias toward the ticket's declared company
+        If company is provided and has matching docs, search is restricted to
+        that company's corpus. Falls back to the full corpus when company is
+        None or unrecognised.
+        """
+        q_emb = self._model.encode([query], convert_to_numpy=True)[0]
+
         if company:
             company_lower = company.lower()
-            for i, doc in enumerate(self._docs):
-                if doc.company == company_lower:
-                    scores[i] *= 1.2  # boost same-company docs
+            indices = [i for i, doc in enumerate(self._docs) if doc.company == company_lower]
+        else:
+            indices = list(range(len(self._docs)))
 
-        top_indices = np.argsort(scores)[::-1][:top_k]
-        return [(self._docs[i], float(scores[i])) for i in top_indices]
+        # Fall back to full corpus if no docs matched the company
+        if not indices:
+            indices = list(range(len(self._docs)))
+
+        subset_embeddings = self._embeddings[indices]
+        scores = _cosine_similarity(q_emb, subset_embeddings)
+
+        top_local = np.argsort(scores)[::-1][:top_k]
+        return [(self._docs[indices[i]], float(scores[i])) for i in top_local]
 
 
 def _load_corpus(root: Path) -> list[Document]:
