@@ -22,3 +22,5 @@ data/embeddings/
 #hr-orchestrate files
 evaluation_criteria.md
 problem_statement.md
+AGENTS.md
+CLAUDE.md
